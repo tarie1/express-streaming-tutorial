@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #[em Local IMDb], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+	
+	h2 Dynamic content
+
+	p The IMDb has the following record counts:
+	div(class='lists')
+		ul
+			li #[strong Reviews:] !{review_count}
+			li #[strong Films:] !{film_count}
+			li #[strong Directors:] !{director_count}
+			li #[strong Genres:] !{genre_count}

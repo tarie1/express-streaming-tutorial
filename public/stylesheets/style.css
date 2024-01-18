@@ -1,0 +1,167 @@
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  width: 80%;
+}
+
+.sidebar-nav li a{
+	text-decoration: none;
+    color: #a0740a;
+    text-transform: uppercase;
+}
+
+.sidebar-nav ul li{
+	list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+p{
+	color: darkgoldenrod;
+	font-weight: 100;
+    line-height: 25px;
+	font-size: 25px;
+}
+
+h1{
+	color: darkgoldenrod;
+	text-align: center;
+	font-size: 65px;
+}
+
+h2{
+	color: darkgoldenrod;
+	font-size: 50px;
+}
+
+h3{
+	font-size: 25px;
+}
+
+i{
+	color: darkgoldenrod;
+	font-size: 20px;
+}
+
+.container-fluid{
+	background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(images/back.jpg);
+    background-size: cover;
+}
+
+.content{
+	width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.lists ul{
+	color: darkgoldenrod;
+}
+
+.lists a{
+	font-weight: 200;
+    line-height: 25px;
+	font-size: 25px;
+	color: #AC87C5;
+}
+
+.reviews{
+  max-width:540px;
+  height: auto;
+  background: #000000;
+  margin-top: 30px;
+  padding: 30px;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+  border-color: #80612e;
+  border-top-left-radius: 40px 40px;
+  border-top-right-radius: 40px 40px;
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 40px 40px;
+}
+
+.reviews-header{
+	color:#cc9b4b;
+	align-content: row;
+	font-size: 15px;
+	font-weight:bold;
+	
+}
+
+.reviews p {
+  font-weight:normal;
+  margin-top: 5px;
+  font-size: 15px;
+  color: darkgoldenrod;
+}
+
+dd{
+	color: darkgoldenrod;
+	line-height: 25px;
+	font-size: 17px;
+	font-family: "Goudy Bookletter 1911", sans-serif;
+}
+.col-sm-2{
+	height: 100vh;
+}
+
+.col-sm-10{
+	background-image: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10))
+}
+
+span{
+	align-content: space-around;
+	margin-left: 20px;
+	font-size: 17px;
+}
+
+.form-group{
+	color: darkgoldenrod;
+	font-size: 22px;
+}
+
+.btn{
+	background-color: black;
+	border-color: black;
+	transition-duration: 0.3s;
+}
+
+.btn:hover{
+	background-color: #AC87C5;
+	border-color: black;
+}
+
+input[type=text] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-color: none;
+}
+
+select[type=select]:hover{
+	cursor: pointer;
+}
+
+input[type=text]:focus {
+  border: 3px solid darkgoldenrod;
+  background-color: black;
+  color: white;
+}
+
+select[type=select]{
+	color: white;
+	background-color: black;
+}
+
+select[type=select]:focus{
+	color: white;
+	background-color: black;
+	border: 3px solid darkgoldenrod;
+}

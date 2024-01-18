@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	div(class="title")
+		h1= title
+	div(class="lists")
+			if review_list.length
+				ul
+					each val in review_list
+						li
+							a(href=val.url) #{val.username} : #{val.film.title}
+							span #{val.rating}/5
+			else
+				p There are no reviews yet.

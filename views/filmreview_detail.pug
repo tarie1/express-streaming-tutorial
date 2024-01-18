@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	div(class="title")
+		h1 ID: #{filmreview._id}
+	div(class='reviews')
+			div(class='reviews-header')
+				h3= filmreview.username
+				a(hrefa=filmreview.film.url) #{filmreview.film.title}
+				span #{filmreview.rating}/5
+			p=filmreview.filmreview
+			
+	div(class="lists")
+		hr
+		p
+			a(href=filmreview.url+'/delete') Delete Review
+		p
+			a(href=filmreview.url+'/update') Update Review

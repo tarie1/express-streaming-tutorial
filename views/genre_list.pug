@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	div(class="lists")
+		if list_genres.length
+			ul
+				each gen in list_genres
+					li
+						a(href=gen.url) #{gen.name}
+
+		else
+			p There are no genres yet.

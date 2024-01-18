@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	div(class='lists')
+		ul
+			each film in film_list
+				li
+					a(href=film.url) #{film.title}
+					|  (#{film.director.name})
+
+			else
+				p There are no films yet.

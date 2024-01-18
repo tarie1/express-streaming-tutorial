@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1 #{director.name}
+	if director.date_of_birth
+		p #{director.lifespan}
+	if director.short_bio
+		dd #{director.short_bio}
+	div(class='lists')
+		if director_films.length
+			ul
+				each film in director_films
+					li
+						a(href=film.url) #{film.title}
+			
+

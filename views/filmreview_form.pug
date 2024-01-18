@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='film') Film:
+      select#film.form-control(type='select' placeholder='Select film' name='film' required='true')
+        - film_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+        for film in film_list
+          if review
+            option(value=film._id selected=(review.film.toString()==film._id.toString() ? 'selected' : false)) #{film.title}
+          else
+            option(value=film._id) #{film.title}
+
+    div.form-group
+      label(for='username') Username:
+      input#username.form-control(type='text' placeholder='Name of the user' name='username' required='true' value=(undefined===review ? '' : review.username))
+    div.form-group
+      label(for='filmreview') Review:
+      input#filmreview.form-control(type='text' placeholder='Your valid opinion' name='filmreview' required='true' value=(undefined===review ? '' : review.filmreview))
+
+    div.form-group
+      label(for='rating') Rating:
+      select#rating.form-control(type='select' placeholder='Select rating' name='rating' required='true')
+        option(value=0) 0
+        option(value=1) 1
+        option(value=2) 2
+        option(value=3) 3
+        option(value=4) 4
+        option(value=5) 5
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

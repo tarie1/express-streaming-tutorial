@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 #{genre.name}
+	div(class='lists')
+		if genre_films.length
+			each film in genre_films
+				a(href=film.url) #{film.title}
+				dd #{film.summary}
+
+		else
+			p This genre has no films yet.

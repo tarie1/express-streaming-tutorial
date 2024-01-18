@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	div(class="title")
+		h1 #{film.title}
+	div(class="lists")
+
+		p #[strong Director: ]
+			a(href=film.director.url) #{film.director.name}
+		p #[strong Summary:] #{film.summary}
+		p #[strong Genre: ]
+			each val, index in film.genre
+				a(href=val.url) #{val.name}
+				if index < film.genre.length - 1
+					|,&nbsp;
+	each val in film_reviews
+		div(class='reviews')
+			div(class='reviews-header')
+				h3=val.username
+				- var solidStars = val.rating || 0
+				- var regularStars = 5 - solidStars
+				each star in Array(solidStars).fill()
+					i(class="fa-solid fa-star")
+				each star in Array(regularStars).fill()
+					i(class="fa-regular fa-star")
+			p=val.filmreview
+			
+			
